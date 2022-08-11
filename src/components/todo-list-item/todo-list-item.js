@@ -97,7 +97,7 @@ class TodoListItem extends React.Component {
     render() {
         const { important, done } = this.props;
 
-        let classNames = 'todo-list-item';
+        let classNames = 'todo-list-item bottom-panel';
         if (important) {
             classNames += ' important';
         }
@@ -120,7 +120,7 @@ class TodoListItem extends React.Component {
         return (
             <form className={classNames} onSubmit={this.onSubmit}>
                 <input
-                    className='todo-list-item-label'
+                    className='form-control new-todo-label'
                     value={this.state.label}
                     onChange={this.onValue}
                 />
