@@ -109,7 +109,10 @@ class TodoListItem extends React.Component {
         if (!this.state.editing) {
             return (
                 <span className={classNames}>
-                    <span className='todo-list-item-label'>
+                    <span
+                        className='todo-list-item-label'
+                        onClick={this.onEdit}
+                    >
                         {this.state.label}
                     </span>
                     {this.buttonsRender()}
